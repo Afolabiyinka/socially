@@ -4,7 +4,7 @@ const TwitterContext = createContext();
 
 export const useTwitterStats = () => useContext(YoutubeContext);
 
-export async function TwitterProvider({ children }) {
+export function TwitterProvider({ children }) {
   const token =
     "AAAAAAAAAAAAAAAAAAAAADqZ3gEAAAAAO6Hc53EkqRhM1s2BkBvhXaYZuNY%3DaP6GRUmgcmlgLWYENGKUgnTHL3Ibtpsf7FQJ0F1E2VmxQpiaL8";
   async function getUser(e) {

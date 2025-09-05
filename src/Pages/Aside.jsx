@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { FaYoutube, FaTwitter, FaFacebook, FaHome } from "react-icons/fa";
-import { X, Sidebar, LogOut, DoorOpen } from "lucide-react";
+import { X, Sidebar, LogOut, DoorOpen, Menu, AlignLeft } from "lucide-react";
 import { useUser } from "../Contexts/UserContext";
 import { CircularProgress } from "@mui/material";
 import ModeToggle from "../Components/ModeToggle";
@@ -29,7 +29,7 @@ const Aside = () => {
         {asideOpen ? (
           <X size={35} className=" hidden stroke-[1px]" />
         ) : (
-          <Sidebar size={35} className="stroke-[1px]" />
+          <Sidebar size={35} strokeWidth={2} />
         )}
       </button>
 
@@ -55,7 +55,7 @@ const Aside = () => {
             {asideOpen ? (
               <X size={30} />
             ) : (
-              <DoorOpen size={35} className=" stroke-[1px] hover:opacity-40" />
+              <AlignLeft size={35} className=" stroke-[1px] hover:opacity-40" />
             )}
           </span>
         </div>
@@ -68,7 +68,7 @@ const Aside = () => {
         >
           <img
             src={user?.picture}
-            // alt={user?.name || "User avatar"}
+            alt={user?.name || "User avatar"}
             className="h-11 w-11 ml-0.5 rounded-full object-cover ring-1 ring-gray-500"
           />
           <p className={`${asideOpen ? "block" : "hidden"}`}>

@@ -61,7 +61,7 @@ const Login = () => {
               onError={handleError}
               shape="pill"
               text="signin_with"
-              theme="filled_black"
+              theme="outline"
               size="lg"
               aria-label="Sign in with Google"
             />
